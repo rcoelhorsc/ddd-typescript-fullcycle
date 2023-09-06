@@ -11,14 +11,21 @@
   },
   "scripts": {
     "test": "npm run tsc -- --noEmit && jest",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "dev": "nodemon src/infrastructure/api/server.ts"
   },
   "dependencies": {
+    "@types/express": "^4.17.17",
+    "@types/supertest": "^2.0.12",
     "@types/uuid": "^9.0.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^6.32.1",
     "sequelize-typescript": "^2.1.5",
     "sqlite3": "^5.1.6",
+    "supertest": "^6.3.3",
     "uuid": "^9.0.0"
   }
 }
