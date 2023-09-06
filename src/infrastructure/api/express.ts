@@ -19,7 +19,7 @@ async function setupDb(){
         logging: false,
         sync: { force: true },
     });
-    await sequelize.addModels([ProductModel]);
+    await sequelize.addModels([CustomerModel, ProductModel]);
     await sequelize.sync();
 }
 setupDb();
