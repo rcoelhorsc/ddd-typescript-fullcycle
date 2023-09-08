@@ -65,5 +65,13 @@ describe("E2E teste for product", () => {
         const product2 = listResponse.body.products[1];
         expect(product2.name).toBe("Product 2");
         expect(product2.price).toBe(20.0);   
+
+        const listResponseXML = await request(app)
+        .get("/product")
+        .set("Accept", "application/xml")
+        .send()
+
+        expect(listResponseXML.status).toBe(200);
+        expect(listResponseXML.text).toContain(`<?xml version="1.0" encoding="UTF-8"?>`);        
     });         
 });
